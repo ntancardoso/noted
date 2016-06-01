@@ -1,0 +1,30 @@
+<ion-navbar *navbar primary>
+  <ion-title>
+    Notes
+  </ion-title>
+  <ion-buttons end>
+    <button (click)="editNote()">
+      <ion-icon name="add"></ion-icon>
+      Add
+    </button>
+  </ion-buttons>
+</ion-navbar>
+
+<ion-content class="home">
+  <ion-card *ngFor="let note of notes">
+    <ion-card-content (click)="editNote(note)">
+      {{note.title}}
+    </ion-card-content>
+    <ion-item>
+      <ion-note item-left class="italic">
+        modified:
+      </ion-note>
+      <ion-note item-left>
+        {{note.updated | date:'short'}}
+      </ion-note>
+      <button danger clear item-right (click)="deleteNote(note)">
+      <ion-icon name="trash"></ion-icon>
+    </button>
+    </ion-item>
+  </ion-card>
+</ion-content>
