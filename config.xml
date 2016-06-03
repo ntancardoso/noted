@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <widget id="com.the9o.app.noted" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
   <name>Noted</name>
-  <description>An Ionic Framework and Cordova project.</description>
+  <description>Simple Notepad Application</description>
   <author email="apps@the9o.com" href="http://the9o.com/">ntancardoso</author>
   <content src="index.html"/>
   <access origin="*"/>

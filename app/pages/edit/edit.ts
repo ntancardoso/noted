@@ -1,10 +1,10 @@
-import {Page, Events, NavController, NavParams, ViewController} from 'ionic-angular';
-import {FormBuilder, Validators} from '@angular/common';
-import {NoteService} from '../../services/note-service/note-service';
-import {Note} from '../../models/note';
+import {Page, Events, NavController, NavParams, ViewController} from "ionic-angular";
+import {FormBuilder, Validators} from "@angular/common";
+import {NoteService} from "../../services/note-service/note-service";
+import {Note} from "../../models/note";
 
 @Page({
-  templateUrl: 'build/pages/edit/edit.html',
+  templateUrl: "build/pages/edit/edit.html",
 })
 export class EditPage {
   note: Note;
@@ -19,7 +19,7 @@ export class EditPage {
 
     this.note = navParams.get("note");
 
-    if (this.note == null || this.note == undefined) {
+    if (this.note == null || this.note === undefined) {
       this.note = new Note();
     }
 
@@ -28,11 +28,10 @@ export class EditPage {
       content: ["", Validators.required]
     });
   }
-  
-  
+
   saveNote() {
     this.ns.save(this.note);
-    this.events.publish('refreshNotes');
+    this.events.publish("refreshNotes");
     this.viewController.dismiss();
   }
 
